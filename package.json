@@ -5,7 +5,8 @@
   "main": "index.js",
   "dependencies": {
     "discord.js": "^11.4.2",
-    "saucenao": "0.0.2"
+    "is-image-url": "^1.1.8",
+    "sagiri": "^1.5.2"
   },
   "devDependencies": {},
   "scripts": {
