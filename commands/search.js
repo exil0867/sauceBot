@@ -66,19 +66,21 @@ exports.run = (bot, msg, args) => {
     console.error('Image attachment/URL not found!');
     msg.channel.send('Please add an image, or image URL!');
   } else if (msg.attachments.array()[0]) {
-    console.log('Supported image attachment found!');
+    console.log('Image attachment found!');
     if (isImageUrl(msg.attachments.array()[0].url) && !notSupportedExts.has(path.extname(msg.attachments.array()[0].url).slice(1).toLowerCase())) {
       getSauce(msg.attachments.array()[0].url);
     } else {
       console.error('The file/extention is not an image!');
       msg.channel.send('The file/extention is not an image!');
     }
-  } else if (isImageUrl(args[0]) && !notSupportedExts.has(path.extname(args[0]).slice(1).toLowerCase())) {
-    console.log('Supported image URL found!');
+  } else if (args[0]) {
+    console.log('Image URL found!');
+    if (isImageUrl(args[0]) && !notSupportedExts.has(path.extname(args[0]).slice(1).toLowerCase())) {
       getSauce(args[0]);
-  } else {
-    console.error('The file/extention is not an image!');
-    msg.channel.send('The file/extention is not an image!');
+    } else {
+      console.error('The file/extention is not an image!');
+      msg.channel.send('The file/extention is not an image!');
+    }
   }
 };
 exports.help = {
