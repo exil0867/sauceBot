@@ -1,5 +1,5 @@
 # sauceBot
-A discord bot made primarily with node.js, discord.js and SauceNAO API, which lets you reverse image search images
+A discord bot made primarily with node.js, discord.js and SauceNAO API, which lets you reverse image search images.
 
 ## Screenshots
 
